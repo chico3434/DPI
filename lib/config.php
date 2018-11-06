@@ -1,12 +1,12 @@
 <?php
 
 	$config = array (
-		'APP_PREFIX' => '',
+		'APP_PREFIX' => '/DPI',
 		'DEFAULT_TIME_ZONE' => 'America/Sao_Paulo',
 		'DB_HOST' => '127.0.0.1',
-		'DB_USER' => 'root',
+		'DB_USER' => 'francisco',
 		'DB_DATABASE' => 'DPI',
-		'DB_PASSWORD' => '1234',
+		'DB_PASSWORD' => '123',
 	);
 
 	$css = array (

@@ -65,8 +65,8 @@
                 $('#salario').removeAttr('disabled');
                 $('#salario').append('<option>Selecione o Salário: </option>');
                 for(var i = 0; i < salarios.length; i++){
-                    console.log(salarios[i].valor);
-                    $('#salario').append('<option>' + salarios[i].valor + '</option>');  
+                    console.log(salarios[i][1]);
+                    $('#salario').append('<option>' + salarios[i][1] + '</option>');  
                 }
             }
         });
