@@ -8,7 +8,7 @@
     <?php headinclude();?>
   </head>
   <body>
-    <nav class="navbar navbar-green navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="home.php">Home</a> 
