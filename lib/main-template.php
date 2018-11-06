@@ -24,7 +24,7 @@
           <a class="navbar-brand" href="lista.php">Lista</a> 
         </div>
           <div class="navbar-header">
-            <i class="fas fa-user text-primary"></i>
+            <i id="icon-user" class="fas fa-user text-primary"></i>
             <p id="usuarioLogado" class="navbar-brand text-primary"><?php getUsuarioLogado(); ?></p>
             <button id="btn-sair" onclick="mostrarPergunta(1)" class="btn btn-danger">Sair</button>
           </div>
@@ -47,6 +47,8 @@
         console.log(usuario);        
         
         if(usuario == 'Desconectado'){
+          $('#icon-user').removeClass('fa-user');
+          $('#icon-user').addClass('fa-user-times'); //talvez possar ser slash em vez de times
           $('#btn-sair').attr('disabled', 'disabled');
         }
       }
