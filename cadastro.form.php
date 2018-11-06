@@ -32,15 +32,16 @@
         </div>
         <div class="row">
             <div class="form-group col-sm-6">
-                <label class="control-label" for="profissao">Profissão</label>
+                <label class="control-label" for="profissao">Profissão*</label>
                 <select class="form-control" name="profissao" id="profissao">
+                <option value="">Selecione a Profissão: </option>
                     <?php listaProfissoes(); ?>
                 </select>
             </div>
             <div class="form-group col-sm-6">
               <label class="control-label" for="salario">Salário*</label>
               <small id="rs" class="text-muted">R$</small>
-              <input type="text" name="salario" id="salario" class="form-control" aria-describedby="rs">
+              <select name="salario" id="salario" class="form-control"></select>
             </div>
         </div>
         <div class="row">
@@ -50,3 +51,24 @@
         </div>
     </div>
 </form>
+<script>
+    $('#salario').attr('disabled', 'disabled');
+    $('#profissao').on('change', function(){
+        $('#salario').attr('disabled', 'disabled');
+        $('#salario').empty();
+        var codProfissao = $('#profissao').val();
+        $.post('salarios.php', { cod: codProfissao }, function(dados){
+            console.log(dados);
+            var salarios = JSON.parse(dados);
+            console.log(salarios);
+            if(salarios.length > 0){
+                $('#salario').removeAttr('disabled');
+                $('#salario').append('<option>Selecione o Salário: </option>');
+                for(var i = 0; i < salarios.length; i++){
+                    console.log(salarios[i].valor);
+                    $('#salario').append('<option>' + salarios[i].valor + '</option>');  
+                }
+            }
+        });
+    });
+</script>
