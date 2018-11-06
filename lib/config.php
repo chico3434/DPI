@@ -11,7 +11,7 @@
 
 	$css = array (
 		'lib/bootstrap-4.1.3-dist/css/bootstrap.min.css',
-		'lib/main.css',
+		'lib/main.css'
 	);
 
 	$headjs = array (

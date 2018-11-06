@@ -4,6 +4,15 @@
 
 	date_default_timezone_set($config['DEFAULT_TIME_ZONE']);
 
+    function getUsuarioLogado(){
+        session_start();
+        if(isset($_SESSION['usuario'])){
+            echo $_SESSION['usuario'];
+        } else {
+            echo "Desconectado";
+        }
+    }
+
 	function absolutePath($relativePath)
 	{
 		global $config;
