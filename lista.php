@@ -6,12 +6,6 @@ function pageTitle(){
     echo 'Listagem dos Funcionários';
 }
 
-function calcIdade($data_nasc) {
-    $date = new DateTime($data_nasc);
-    $interval = $date->diff(new DateTime("now"));
-    return $interval->y;
-}
-
 function codParaSexo($cod){
     if($cod == 'M'){
         return 'Masculino';

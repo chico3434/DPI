@@ -23,6 +23,9 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="lista.php">Lista</a> 
         </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="graficos.php">Gráficos</a> 
+        </div>
           <div class="navbar-header">
             <i id="icon-user" class="fas fa-user text-primary"></i>
             <p id="usuarioLogado" class="navbar-brand text-primary"><?php getUsuarioLogado(); ?></p>

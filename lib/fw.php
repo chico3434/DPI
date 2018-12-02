@@ -2,7 +2,14 @@
 
 	include 'config.php';
 
-	date_default_timezone_set($config['DEFAULT_TIME_ZONE']);
+    date_default_timezone_set($config['DEFAULT_TIME_ZONE']);
+    
+    // Está aqui por ser usado por mais de uma página
+    function calcIdade($data_nasc) {
+        $date = new DateTime($data_nasc);
+        $interval = $date->diff(new DateTime("now"));
+        return $interval->y;
+    }
 
     function getUsuarioLogado(){
         session_start();
