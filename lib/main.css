@@ -44,3 +44,15 @@ label.disabled {
 	background-color: rgba(0,0,0,.5);
 	text-align: center;
 }
+
+.graficos{
+	position: relative;
+	left: 50%;
+	margin-left: -150px;
+	padding: 0;
+}
+
+.graficos svg {
+	width: 300px;
+	height: 300px;
+}

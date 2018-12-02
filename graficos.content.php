@@ -1,4 +1,4 @@
-<div class="graficos"><svg id="idade"></svg></div>
+<div class="graficos"><svg id="idade"></svg><svg id="salario"></svg></div>
 
 <script>
 
@@ -35,5 +35,27 @@
 
         return chart;
     });
+
+    var dadosSalario = <?php echo getQuantidadePor("salario"); ?>;
+
+    nv.addGraph(function() {
+
+        var chart = nv.models.pie()
+                .x(function(d) { return d.key; })
+                .y(function(d) { return d.value; })
+                .width(width)
+                .height(height)
+        ;
+
+        d3.select("#salario")
+                .datum([dadosSalario])
+                .transition().duration(1200)
+                .attr('width', width)
+                .attr('height', height)
+                .call(chart)
+        ;
+
+        return chart;
+        });
 
 </script>
