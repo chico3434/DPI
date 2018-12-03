@@ -6,31 +6,6 @@ function pageTitle(){
     echo 'Listagem dos Funcionários';
 }
 
-function codParaSexo($cod){
-    if($cod == 'M'){
-        return 'Masculino';
-    } else if($cod == 'f'){
-        return 'Feminino';
-    } else {
-        return 'Outro';
-    }
-}
-
-function codParaPro($cod){
-    $dado = array(
-        "cod" => $cod
-    );
-    $resp = sqlSelectFirst("Profissoes", $dado);
-    if(!$resp){
-        echo "<div class='alert alert-danger'>";
-        echo "Erro ao consultar Profissoes";
-        echo "</div>";
-        die();
-    } else {
-        return $resp['nome'];
-    }
-}
-
 function listaFuncionarios(){
     try{
         $sql = "SELECT * FROM Funcionarios";
