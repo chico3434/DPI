@@ -1,16 +1,12 @@
-<div class="graficos"><svg id="idade"></svg><svg id="salario"></svg></div>
+<div class="graficos">
+    <h2 class="text-secondary">Gráfico por Idade</h2>
+    <svg id="idade"></svg>
+
+    <h2 class="text-secondary">Gráfico por Salário</h2>
+    <svg id="salario"></svg>
+</div>
 
 <script>
-
-    // var dados = [
-    //     {key: "One", value: 3},
-    //     {key: "Two", value: 2},
-    //     {key: "Three", value: 9},
-    //     {key: "Four", value: 7},
-    //     {key: "Five", value: 4},
-    //     {key: "Six", value: 3},
-    // ];
-
     var dadosIdade = <?php echo porIdade(); ?>;
 
     var width = 300;
