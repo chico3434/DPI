@@ -70,7 +70,7 @@
             .datum([dadosSexo])
             .transition().duration(1200)
             .attr('width', width)
-            .attr('hieght', height)
+            .attr('height', height)
             .call(chart);
 
         return chart;
@@ -90,7 +90,7 @@
             .datum([dadosProfissao])
             .transition().duration(1200)
             .attr('width', width)
-            .attr('hieght', height)
+            .attr('height', height)
             .call(chart);
 
         return chart;
