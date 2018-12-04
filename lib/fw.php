@@ -15,7 +15,7 @@
     function codParaSexo($cod){
         if($cod == 'M'){
             return 'Masculino';
-        } else if($cod == 'f'){
+        } else if($cod == 'F'){
             return 'Feminino';
         } else {
             return 'Outro';
